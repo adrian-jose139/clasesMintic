@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="loapage()">
+    <div class="container">
+        <h2>Validador de contraseñas</h2>
+        <div class="inputs">
+            <input type="password" id="password" placeholder="ingrese su contraseña">
+            <i></i>
+        </div>
+        <button onmousemove="validar()">Validar</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        function validar() {
+            alert("DATOS VALIDADOS CORRECTAMENTE");
+            console.log("DATOS VALIDADOS CORRECTAMENTE");
+
+        }
+        function loapage() {
+            Swal.fire({
+                title: "BIENVENIDO",
+                text: "A MI SITIO WEB",
+                icon: "info", 
+                showConfirmButton: false,
+                timer: 3000
+            });
+        }
+    </script>
+</body>
+
+</html>
