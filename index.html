@@ -5,22 +5,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <style>
+        body{
+            font-family: arial,sans-serif;
+            background: #9eeee9;
+            background: #bdbdf0;
+            background: linear-gradient(90deg, rgba(189, 189, 240, 1) 0%, rgba(194, 194, 242, 1) 23%, rgba(0, 212, 255, 1) 92%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container{
+            background-color: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            width: 300px;
+            box-shadow: -10px -13px 107px -19px rgba(0,0,0,1);
+        }
+
+        input[type="password"],
+        input[type="text"] {
+            width: 85%;
+            padding: 10px 40px 10px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        #btn_validate{
+            margin-top: 10px;
+            background-color: rgb(204, 153, 204);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 12px;
+            box-shadow: -10px -13px 107px -19px rgba(0,0,0,1);
+            cursor: pointer;
+        }
+
+        button:hover{
+            background: #79b5f2;
+            color: white;
+            transition: 0.3s all ease-in;
+            transform: scale(1.1);
+        }
+
+        .toggle_password{
+            position: absolute;
+            cursor: pointer;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            color: #888;
+        }
+
+        .inputs{
+            position: relative;
+            width: 100%;
+        }
+
+    </style>
 </head>
 
 <body onload="loapage()">
     <div class="container">
+        
         <h2>Validador de contraseñas</h2>
         <div class="inputs">
             <input type="password" id="password" placeholder="ingrese su contraseña">
-            <i></i>
+            <i class="fas fa-eye toggle_password" id="toggle_password"></i>
         </div>
-        <button onmousemove="validar()">Validar</button>
+        <button id="btn_validate" onmousemove="validar()">Validar</button>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         function validar() {
-            alert("DATOS VALIDADOS CORRECTAMENTE");
-            console.log("DATOS VALIDADOS CORRECTAMENTE");
+            alert("BIENVENIDO AL SISTEMA");
+          
 
         }
         function loapage() {
@@ -32,6 +98,16 @@
                 timer: 3000
             });
         }
+            const toggle_password = document.getElementById("toggle_password");
+            const password = document.getElementById("password");
+
+            toggle_password.addEventListener("click", ()=>{
+                const type = password.type === "password" ? "text" : "password";
+                password.type = type;
+                toggle_password.classList.toggle("fa-eye")
+                toggle_password.classList.toggle("fa-eye-slash")
+            });
+
     </script>
 </body>
 
