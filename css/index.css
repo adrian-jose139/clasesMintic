@@ -1,0 +1,32 @@
+menu {
+    background-color: rgb(171, 219, 244);
+    padding: 0px;
+    display: flex;
+    height: 40px;
+    border-radius: 5px;
+    overflow: hidden;
+
+}
+
+li {
+    list-style-type: none;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+    height: 100%;
+    align-items: center;
+    padding: 0 10px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+}
+
+a:hover {
+    background-color: rgb(204, 222, 240);
+    color: black;
+
+}
+    
